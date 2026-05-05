@@ -1,0 +1,47 @@
+# .yamllint.yaml
+# Tuned for Kubernetes / ArgoCD manifests
+---
+extends: default
+
+rules:
+  # K8s manifests often have long image refs, URLs, or base64 blocks
+  line-length:
+    max: 200
+    level: warning
+
+  # Kubernetes uses 'yes'/'no' and 'on'/'off' in some places (e.g. Helm values)
+  truthy:
+    allowed-values: ["true", "false", "yes", "no", "on", "off"]
+    check-keys: false
+
+  # Allow multiple documents in one file (e.g. multi-resource manifests)
+  document-start:
+    present: optional
+
+  # Indentation: 2 spaces, consistent with K8s convention
+  indentation:
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  # Allow trailing spaces in multi-line strings (Helm templates)
+  trailing-spaces: enable
+
+  # Bracket/brace spacing — relaxed for Helm template expressions {{ }}
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 0
+
+  # Comments — require a space after #, but don't enforce before
+  comments:
+    min-spaces-from-content: 1
+
+  # Empty lines — allow up to 2 blank lines between resources in a file
+  empty-lines:
+    max: 2
+    max-start: 0
+    max-end: 1

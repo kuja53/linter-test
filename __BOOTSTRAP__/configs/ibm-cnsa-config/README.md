@@ -1,0 +1,2 @@
+- je potreba vymenit "" za realne hodnoty ( nazvy filesystemu, remote clusteru, username/password atd.)
+- je nutne si zkontrolovat a pripadne upravit RBAC pro ArgoCD, pokud budete pouzivat - aktualne je to nachystane na standardni OpenShift GitOps

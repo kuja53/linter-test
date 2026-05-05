@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-b-ibm-cnsa-config
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ibm-cnsa-config
+  source:
+    helm:
+      valueFiles:
+      - values.yaml
+    repoURL: https://github.com/kuja53/linter-test
+    path: __BOOTSTRAP__/configs/ibm-cnsa-config
+    targetRevision: HEAD

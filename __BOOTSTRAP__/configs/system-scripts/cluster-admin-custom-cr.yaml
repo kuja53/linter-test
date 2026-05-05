@@ -1,0 +1,20 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cluster-admin-custom
+rules:
+  # Read permissions for PVs and namespaces in the core API group
+  - apiGroups: [""]
+    resources: [persistentvolumes, namespaces]
+    verbs: [get, list]
+  # Full permissions for all other resources in the core API group
+  - apiGroups: [""]
+    resources: [bindings, componentstatuses, configmaps, endpoints, events, limitranges, nodes, persistentvolumeclaims, pods, podtemplates, replicationcontrollers, resourcequotas, secrets, serviceaccounts, services]
+    verbs: ['*']
+  # Full permissions for all API groups except "core" and "*.authorization.k8s.io"
+  - apiGroups: [admissionregistration.k8s.io, apiextensions.k8s.io, apiregistration.k8s.io, apps, authentication.k8s.io, autoscaling, batch, certificates.k8s.io, coordination.k8s.io, crd.k8s.amazonaws.com, events.k8s.io, extensions, monitoring.coreos.com, networking.k8s.io, policy, scheduling.k8s.io, storage.k8s.io]
+    resources: ['*']
+    verbs: ['*']
+  # Full permissions for all non-resource URLs
+  - nonResourceURLs: ['*']
+    verbs: ['*']

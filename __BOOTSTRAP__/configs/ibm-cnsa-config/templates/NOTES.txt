@@ -1,0 +1,7 @@
+1. Check status of the cluster resource
+   oc describe cluster -n ibm-spectrum-scale
+2. Check status of the remoteCluster resource
+   oc describe remotecluster -n ibm-spectrum-scale
+3. Check status of the remote filesystem resource
+   oc describe filesystem -n ibm-spectrum-scale
+

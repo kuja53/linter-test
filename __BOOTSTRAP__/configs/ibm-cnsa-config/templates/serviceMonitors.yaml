@@ -1,0 +1,67 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: gpfs-filesystem
+  namespace: ibm-spectrum-scale
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "grafanabridge"
+  endpoints:
+    - port: prometheus
+      interval: 30s
+      path: /metrics_gpfs_filesystem
+      scheme: https
+      tlsConfig:
+        insecureSkipVerify: true
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: gpfs-fileset
+  namespace: ibm-spectrum-scale
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "grafanabridge"
+  endpoints:
+    - port: prometheus
+      interval: 30s
+      path: /metrics_gpfs_fileset
+      scheme: https
+      tlsConfig:
+        insecureSkipVerify: true
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: gpfs-mmhealth
+  namespace: ibm-spectrum-scale
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "grafanabridge"
+  endpoints:
+    - port: prometheus
+      interval: 30s
+      path: /metrics_gpfs_mmhealth
+      scheme: https
+      tlsConfig:
+        insecureSkipVerify: true
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: gpfs-metrics
+  namespace: ibm-spectrum-scale
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "grafanabridge"
+  endpoints:
+    - port: prometheus
+      interval: 30s
+      path: /metrics
+      scheme: https
+      tlsConfig:
+        insecureSkipVerify: true

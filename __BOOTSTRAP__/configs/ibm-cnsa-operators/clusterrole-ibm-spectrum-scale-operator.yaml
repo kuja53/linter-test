@@ -1,0 +1,495 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/instance: ibm-spectrum-scale
+    app.kubernetes.io/name: operator
+  name: ibm-spectrum-scale-operator
+rules:
+- apiGroups:
+  - ''
+  resources:
+  - PersistentVolume
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - ''
+  resources:
+  - configmap
+  - endpoints/restricted
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ''
+  resources:
+  - configmaps
+  - persistentvolumeclaims
+  - pods
+  - secrets
+  - services
+  verbs:
+  - '*'
+- apiGroups:
+  - ''
+  resources:
+  - endpoints
+  verbs:
+  - '*'
+- apiGroups:
+  - ''
+  resources:
+  - events
+  verbs:
+  - '*'
+- apiGroups:
+  - ''
+  resources:
+  - namespaces
+  - pods/status
+  verbs:
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ''
+  resources:
+  - nodes
+  verbs:
+  - get
+  - list
+  - patch
+  - watch
+- apiGroups:
+  - ''
+  resources:
+  - nodes/status
+  verbs:
+  - get
+  - list
+  - patch
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - persistentvolumeclaims/status
+  verbs:
+  - get
+- apiGroups:
+  - ''
+  resources:
+  - persistentvolumes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ''
+  resources:
+  - pods/eviction
+  - pods/exec
+  verbs:
+  - create
+- apiGroups:
+  - ''
+  resources:
+  - secrets/status
+  verbs:
+  - '*'
+- apiGroups:
+  - ''
+  resources:
+  - serviceaccounts
+  verbs:
+  - '*'
+- apiGroups:
+  - ''
+  resourceNames:
+  - ibm-spectrum-scale-csi-operator
+  resources:
+  - serviceaccounts
+  verbs:
+  - delete
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ''
+  resources:
+  - services/finalizers
+  verbs:
+  - '*'
+- apiGroups:
+  - apps
+  resources:
+  - daemonsets
+  - deployments
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps
+  resourceNames:
+  - ibm-spectrum-scale-csi-operator
+  resources:
+  - deployments
+  verbs:
+  - delete
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - replicasets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - config.openshift.io
+  resources:
+  - clusterversions
+  - dnses
+  - networks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - csi.ibm.com
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - csi.ibm.com
+  resources:
+  - csiscaleoperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - csi.ibm.com
+  resources:
+  - csiscaleoperators/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - csi.ibm.com
+  resources:
+  - csiscaleoperators/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - discovery.k8s.io
+  resources:
+  - endpointslices
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - machineconfiguration.openshift.io
+  resources:
+  - machineconfigpools
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - monitoring.coreos.com
+  resources:
+  - servicemonitors
+  verbs:
+  - create
+  - get
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - networkpolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - networkpolicies/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - networkpolicies/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - oauth.openshift.io
+  resources:
+  - oauthclients
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - watch
+- apiGroups:
+  - policy
+  resources:
+  - poddisruptionbudgets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - watch
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - clusterrolebindings
+  - clusterroles
+  verbs:
+  - '*'
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resourceNames:
+  - ibm-spectrum-scale-csi-operator
+  resources:
+  - clusterrolebindings
+  - clusterroles
+  verbs:
+  - delete
+  - get
+  - list
+  - watch
+- apiGroups:
+  - route.openshift.io
+  resources:
+  - routes
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - ''
+  - '*'
+  - approvalrequests
+  - asyncreplications
+  - cachevolumeoperations
+  - cachevolumes
+  - callhomes
+  - clusters
+  - compressionjobs
+  - consistencygroups
+  - daemons
+  - diskjobs
+  - dnss
+  - encryptionconfigs
+  - filesystems
+  - grafanabridges
+  - guis
+  - localdisks
+  - pmcollectors
+  - recoverygroups
+  - remoteclusters
+  - restripefsjobs
+  - stretchclusterinitnodes
+  - stretchclusters
+  - stretchclustertiebreaker
+  - upgradeapprovals
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - '*/finalizers'
+  - asyncreplications/finalizers
+  - callhomes/finalizers
+  - clusters/finalizers
+  - compressionjobs/finalizers
+  - daemons/finalizers
+  - diskjobs/finalizers
+  - dnss/finalizers
+  - encryptionconfigs/finalizers
+  - filesystems/finalizers
+  - grafanabridges/finalizers
+  - guis/finalizers
+  - localdisks/finalizers
+  - pmcollectors/finalizers
+  - recoverygroups/finalizers
+  - regionaldrexports/finalizers
+  - remoteclusters/finalizers
+  - restripefsjobs/finalizers
+  - stretchclusterinitnodes/finalizers
+  - stretchclusters/finalizers
+  - stretchclustertiebreaker/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - '*/status'
+  - approvalrequests/status
+  - asyncreplications/status
+  - cachevolumeoperations/status
+  - cachevolumes/status
+  - callhomes/status
+  - clusters/status
+  - compressionjobs/status
+  - consistencygroups/status
+  - daemons/status
+  - diskjobs/status
+  - dnss/status
+  - encryptionconfigs/status
+  - guis/status
+  - localdisks/status
+  - pmcollectors/status
+  - recoverygroups/status
+  - regionaldrexports/status
+  - regionaldrs/finalizers
+  - regionaldrs/status
+  - remoteclusters/status
+  - restripefsjobs/status
+  - stretchclusterinitnodes/status
+  - stretchclusters/status
+  - stretchclustertiebreaker/status
+  - threadDeadlockCapture/status
+  - upgradeapprovals/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - clusterinterconnects
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - filesystem
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - filesystems/status
+  - regionaldrs
+  verbs:
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - grafanabridges/status
+  verbs:
+  - delete
+  - get
+  - patch
+  - update
+- apiGroups:
+  - scale.spectrum.ibm.com
+  resources:
+  - regionaldrexports
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - security.openshift.io
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - '*'
+- apiGroups:
+  - snapshot.storage.k8s.io
+  resources:
+  - volumesnapshotclasses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - storage.k8s.io
+  resources:
+  - csidrivers
+  - storageclasses
+  - volumeattachments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch

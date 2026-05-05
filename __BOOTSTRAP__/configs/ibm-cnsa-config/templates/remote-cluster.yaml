@@ -1,0 +1,17 @@
+apiVersion: scale.spectrum.ibm.com/v1beta1
+kind: RemoteCluster
+metadata:
+  labels:
+    app.kubernetes.io/instance: ibm-spectrum-scale
+    app.kubernetes.io/name: cluster
+  name: {{ .Values.remoteCluster.name }}
+  namespace: ibm-spectrum-scale
+spec:
+  gui:
+    csiSecretName: gpfs-ui-secret
+    hosts:
+    {{- range .Values.remoteCluster.hosts }}
+    - {{ . }}
+    {{- end }}
+    insecureSkipVerify: true
+    secretName: gpfs-ui-secret

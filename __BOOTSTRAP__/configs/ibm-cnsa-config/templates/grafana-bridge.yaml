@@ -1,0 +1,13 @@
+apiVersion: scale.spectrum.ibm.com/v1beta1
+kind: GrafanaBridge
+metadata:
+  labels:
+    app.kubernetes.io/instance: ibm-spectrum-scale
+    app.kubernetes.io/name: cluster
+  name: grafanabridge
+  namespace: ibm-spectrum-scale
+spec:
+  enablePrometheusExporter: true
+  nodeSelector:
+    {{ .Values.cluster.nodeSelector | toYaml }}
+

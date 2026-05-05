@@ -1,0 +1,21 @@
+cluster:
+  pmcollector:
+    storageClass: ""
+  nodeSelector: 
+    node-role.kubernetes.io/worker: ""
+  resources:
+    cpu: ""
+    memory: ""
+
+
+remoteCluster:
+  name: ""
+  hosts: 
+  - ""
+
+filesystem:
+  remote:
+    name: ""
+
+storageClass:
+  name: ""

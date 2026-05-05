@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-b-grafana
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: grafana
+  source:
+    helm:
+      valueFiles:
+      - values-cluster-b.yaml
+    repoURL: https://github.com/kuja53/linter-test
+    path: __BOOTSTRAP__/configs/grafana
+    targetRevision: HEAD

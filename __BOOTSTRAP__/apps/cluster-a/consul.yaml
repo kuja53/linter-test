@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-a-consul
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: consul
+  source:
+    helm:
+      valueFiles:
+      - values-cluster-a.yaml
+    repoURL: https://github.com/kuja53/linter-test
+    path: __BOOTSTRAP__/configs/consul
+    targetRevision: HEAD
