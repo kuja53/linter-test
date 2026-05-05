@@ -16,13 +16,15 @@ rules:
 
   # Allow multiple documents in one file (e.g. multi-resource manifests)
   document-start:
-    present: optional
+    present: true
+    level: warning
 
   # Indentation: 2 spaces, consistent with K8s convention
   indentation:
     spaces: 2
     indent-sequences: true
     check-multi-line-strings: false
+    level: warning
 
   # Allow trailing spaces in multi-line strings (Helm templates)
   trailing-spaces: enable

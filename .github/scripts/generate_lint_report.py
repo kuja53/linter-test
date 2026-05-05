@@ -37,7 +37,8 @@ except Exception:
 LOG_DIR = Path("/tmp/lint-logs")
 log_map = {
     "YAML Lint":       ("lint-log-yamllint/yamllint.log",          "yamllint"),
-    "ArgoCD App Lint": ("lint-log-argocd-app/argocd-app-lint.log", "argocd-app-lint"),
+    "ArgoCD App Lint": ("lint-log-argocd-manifest-app/argocd-app-lint.log", "argocd-app-lint"),
+    "Manifest App Lint": ("lint-log-argocd-manifest-app/manifests-lint.log", "manifests-app-lint"),
     "Helm Lint":       ("lint-log-helm/helm-lint.log",             "helm-lint"),
     "ArgoCD CLI Lint": ("lint-log-argocd-cli/argocd-cli-lint.log", "argocd-cli-lint"),
 }
