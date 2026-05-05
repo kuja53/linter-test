@@ -16,7 +16,7 @@ rules:
 
   # Allow multiple documents in one file (e.g. multi-resource manifests)
   document-start:
-    present: true
+    present: false
     level: warning
 
   # Indentation: 2 spaces, consistent with K8s convention

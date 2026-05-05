@@ -95,14 +95,14 @@ jobs:
             -schema-location default \
             -schema-location "https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json" \
             -ignore-missing-schemas | \
-          tee /tmp/manifests-lint.log
+          tee -a /tmp/argocd-app-lint.log
       
       - name: Upload log artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: lint-log-argocd-manifest-app
-          path: /tmp/*.log
+          name: lint-log-argocd-app
+          path: /tmp/argocd-app-lint.log
           retention-days: 7
 
 
@@ -126,6 +126,10 @@ jobs:
         run: |
           curl -sSfL "https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
             | tar xz -C /usr/local/bin
+
+      - name: Install helm-kubeconform
+        run: |
+          helm plugin install https://github.com/jtyr/kubeconform-helm
 
       - name: Update Helm dependencies (if needed)
         # Runs before lint on charts with dependencies
@@ -162,6 +166,9 @@ jobs:
               -schema-location default \
               -schema-location "https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json" \
               -ignore-missing-schemas 2>&1 | tee -a "$LOG_FILE"
+
+           echo "▶ Validating: $CHART_DIR" | tee -a "$LOG_FILE" 
+           helm kubeconform "$CHART_DIR" 2>&1 | tee -a "$LOG_FILE"
  
             if [ "${PIPESTATUS[1]}" -ne 0 ]; then
               echo "✗ kubeconform FAILED: $CHART_DIR" | tee -a "$LOG_FILE"
