@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArgoCD Lint · kuja53/linter-test #12</title>
+  <title>ArgoCD Lint · kuja53/linter-test #13</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -316,8 +316,8 @@
 <div class="topbar">
   <div class="tb-brand">⎈ <em>ArgoCD</em> Lint Report</div>
   <div class="tb-run">
-    <a href="https://github.com/kuja53/linter-test/actions/runs/25375080012" target="_blank" rel="noopener">Run #12</a>
-    &nbsp;·&nbsp; 2026-05-05 12:01 UTC
+    <a href="https://github.com/kuja53/linter-test/actions/runs/25375566883" target="_blank" rel="noopener">Run #13</a>
+    &nbsp;·&nbsp; 2026-05-05 12:11 UTC
   </div>
 </div>
 
@@ -330,7 +330,7 @@
     </div>
     <h1>linter-test</h1>
     <div class="hero-meta">
-      <b>main</b> &nbsp;·&nbsp; <b>c9df631</b>
+      <b>main</b> &nbsp;·&nbsp; <b>a637629</b>
       &nbsp;·&nbsp; kuja53 via push
     </div>
 
@@ -1263,7 +1263,84 @@
       </div>
       
       <div class="log-wrap" id="log-argocd-app-lint" style="display:none">
-        <pre class='log-block'><span class="log-error">Summary: 12 resources found in 12 files - Valid: 12, Invalid: 0, Errors: 0, Skipped: 0</span>
+        <pre class='log-block'><span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-config.yaml: [32mApplication cluster-a-ibm-cnsa-config is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-a/system-scripts.yaml: [32mApplication cluster-a-system-scripts is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-a/consul.yaml: [32mApplication cluster-a-consul is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-b/system-scripts.yaml: [32mApplication cluster-b-system-scripts is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-a/grafana.yaml: [32mApplication cluster-a-grafana is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-b/vault.yaml: [32mApplication cluster-b-vault is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-operators.yaml: [32mApplication cluster-b-ibm-cnsa-operators is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-a/vault.yaml: [32mApplication cluster-a-vault is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-config.yaml: [32mApplication cluster-b-ibm-cnsa-config is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-b/grafana.yaml: [32mApplication cluster-b-grafana is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-b/consul.yaml: [32mApplication cluster-b-consul is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-operators.yaml: [32mApplication cluster-a-ibm-cnsa-operators is valid[0m</span>
+<span class="log-error">Summary: 12 resources found in 12 files - Valid: 12, Invalid: 0, Errors: 0, Skipped: 0</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale.yaml: [32mNamespace ibm-spectrum-scale is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/system-scripts/certificates.yaml: [32mSecret certificates is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-cr.yaml: [32mClusterRole cluster-admin-custom is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-regional-dr.yaml: [32mClusterRole ibm-spectrum-scale-regional-dr is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-monitor.yaml: [32mClusterRole ibm-spectrum-scale-monitor is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-sysmon.yaml: [32mRole ibm-spectrum-scale-sysmon is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-dns.yaml: [32mNamespace ibm-spectrum-scale-dns is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-crb.yaml: [32mClusterRoleBinding cluster-admin-custom is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-privileged.yaml: [32mClusterRoleBinding ibm-spectrum-scale-privileged is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-regional-dr.yaml: [32mClusterRoleBinding ibm-spectrum-scale-regional-dr is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-operator.yaml: [32mServiceAccount ibm-spectrum-scale-operator is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclustertiebreakers.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition stretchclustertiebreakers.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-approvalrequests.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition approvalrequests.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-asyncreplications.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition asyncreplications.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-recoverygroups.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition recoverygroups.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumes.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition cachevolumes.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-maintenance.yaml: [32mClusterRole ibm-spectrum-scale-maintenance is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-guis.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition guis.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnss.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition dnss.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-operator.yaml: [32mClusterRoleBinding ibm-spectrum-scale-operator is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumeoperations.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition cachevolumeoperations.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-dns.yaml: [32mServiceAccount ibm-spectrum-scale-dns is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-remoteclusters.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition remoteclusters.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrexports.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition regionaldrexports.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-filesystems.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition filesystems.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusters.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition clusters.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-compressionjobs.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition compressionjobs.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-pmcollectors.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition pmcollectors.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-daemons.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition daemons.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-localdisks.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition localdisks.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-core.yaml: [32mServiceAccount ibm-spectrum-scale-core is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-callhomes.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition callhomes.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition encryptionconfigs.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-operator.yaml: [32mNamespace ibm-spectrum-scale-operator is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-default.yaml: [32mServiceAccount ibm-spectrum-scale-default is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-csiscaleoperators.csi.ibm.com.yaml: [33mCustomResourceDefinition csiscaleoperators.csi.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-leader-election-role.yaml: [32mRole ibm-spectrum-scale-leader-election-role is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusterinterconnects.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition clusterinterconnects.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-diskjobs.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition diskjobs.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-kthread-binding.yaml: [32mRoleBinding ibm-spectrum-scale-kthread-binding is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-regional-dr.yaml: [32mRole ibm-spectrum-scale-regional-dr is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-restripefsjobs.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition restripefsjobs.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-consistencygroups.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition consistencygroups.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-grafanabridges.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition grafanabridges.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnsconfigs.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition dnsconfigs.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-regional-dr.yaml: [32mRoleBinding ibm-spectrum-scale-regional-dr is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-csi.yaml: [32mNamespace ibm-spectrum-scale-csi is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/configmap-ibm-spectrum-scale-manager-config.yaml: [32mConfigMap ibm-spectrum-scale-manager-config is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusters.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition stretchclusters.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/service-ibm-spectrum-scale-webhook-service.yaml: [32mService ibm-spectrum-scale-webhook-service is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-upgradeapprovals.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition upgradeapprovals.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-sysmon.yaml: [32mRoleBinding ibm-spectrum-scale-sysmon is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-privileged.yaml: [32mRoleBinding ibm-spectrum-scale-privileged is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-leader-election-rolebinding.yaml: [32mRoleBinding ibm-spectrum-scale-leader-election-rolebinding is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-pmcollector.yaml: [32mServiceAccount ibm-spectrum-scale-pmcollector is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusterinitnodes.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition stretchclusterinitnodes.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-regional-dr.yaml: [32mServiceAccount ibm-spectrum-scale-regional-dr is valid[0m</span>
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-volumes.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition volumes.scale.spectrum.ibm.com skipped[0m
+[33m-[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrs.scale.spectrum.ibm.com.yaml: [33mCustomResourceDefinition regionaldrs.scale.spectrum.ibm.com skipped[0m
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-operator.yaml: [32mClusterRole ibm-spectrum-scale-operator is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-gui.yaml: [32mServiceAccount ibm-spectrum-scale-gui is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-privileged.yaml: [32mClusterRole ibm-spectrum-scale-privileged is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/validatingwebhookconfiguration-ibm-spectrum-scale-validating-webhook-configuration.yaml: [32mValidatingWebhookConfiguration ibm-spectrum-scale-validating-webhook-configuration is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/mutatingwebhookconfiguration-ibm-spectrum-scale-mutating-webhook-configuration.yaml: [32mMutatingWebhookConfiguration ibm-spectrum-scale-mutating-webhook-configuration is valid[0m</span>
+<span class="log-ok">[32m✔[0m __BOOTSTRAP__/configs/ibm-cnsa-operators/deployment-ibm-spectrum-scale-controller-manager.yaml: [32mDeployment ibm-spectrum-scale-controller-manager is valid[0m</span>
 <span class="log-error">Summary: 65 resources found in 65 files - Valid: 35, Invalid: 0, Errors: 0, Skipped: 30</span></pre>
       </div>
     </div>
@@ -1287,39 +1364,6 @@
 <span class="log-ok">▶ Templating &amp; validating: __BOOTSTRAP__/configs/consul</span>
 <span class="log-error">Summary: 67 resources found parsing stdin - Valid: 36, Invalid: 0, Errors: 0, Skipped: 31</span>
 <span class="log-ok">▶ Validating: __BOOTSTRAP__/configs/consul</span>
-<span class="log-error">ERROR: Testing failed: kubeconform failed: failed to run kubeconform: rc=1</span>
-<span class="log-error">stdin - CustomResourceDefinition controlplanerequestlimits.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition exportedservices.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition gatewayclassconfigs.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition gatewayclasses.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition gatewaypolicies.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition gateways.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition grpcroutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition ingressgateways.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition jwtproviders.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition meshes.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition meshservices.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition proxydefaults.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition referencegrants.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition registrations.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition routeauthfilters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition routeretryfilters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition routetimeoutfilters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition samenessgroups.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition httproutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition serviceintentions.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition servicedefaults.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition serviceresolvers.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition servicesplitters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition servicerouters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition terminatinggateways.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition tcproutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition trafficpermissions.auth.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition tlsroutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - CustomResourceDefinition udproutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
-<span class="log-error">stdin - PodDisruptionBudget release-name-consul-connect-injector failed validation: could not find schema for PodDisruptionBudget</span>
-<span class="log-error">stdin - PodDisruptionBudget release-name-consul-server failed validation: could not find schema for PodDisruptionBudget</span>
-<span class="log-error">Error: plugin "kubeconform" exited with error</span>
 <span class="log-ok">✓ OK: __BOOTSTRAP__/configs/consul</span>
 <span class="log-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 <span class="log-section">▶ Linting chart: __BOOTSTRAP__/configs/grafana</span>
@@ -1343,18 +1387,6 @@
 <span class="log-ok">▶ Templating &amp; validating: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
 <span class="log-error">Summary: 16 resources found parsing stdin - Valid: 10, Invalid: 0, Errors: 0, Skipped: 6</span>
 <span class="log-ok">▶ Validating: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
-<span class="log-error">ERROR: Testing failed: kubeconform failed: failed to run kubeconform: rc=1</span>
-<span class="log-error">stdin - GrafanaBridge grafanabridge failed validation: could not find schema for GrafanaBridge</span>
-<span class="log-error">stdin - Cluster ibm-spectrum-scale failed validation: could not find schema for Cluster</span>
-<span class="log-error">stdin - failed validation: could not find schema for Filesystem</span>
-<span class="log-error">stdin - MachineConfig 00-worker-ibm-spectrum-scale-kernel-devel failed validation: could not find schema for MachineConfig</span>
-<span class="log-error">stdin - failed validation: could not find schema for RemoteCluster</span>
-<span class="log-error">stdin - ServiceMonitor gpfs-filesystem failed validation: could not find schema for ServiceMonitor</span>
-<span class="log-error">stdin - ServiceMonitor gpfs-metrics failed validation: could not find schema for ServiceMonitor</span>
-<span class="log-error">stdin - ServiceMonitor gpfs-fileset failed validation: could not find schema for ServiceMonitor</span>
-<span class="log-error">stdin - ServiceMonitor gpfs-mmhealth failed validation: could not find schema for ServiceMonitor</span>
-<span class="log-error">stdin - Route grafanabridge failed validation: could not find schema for Route</span>
-<span class="log-error">Error: plugin "kubeconform" exited with error</span>
 <span class="log-ok">✓ OK: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
 <span class="log-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 <span class="log-section">▶ Linting chart: __BOOTSTRAP__/configs/vault</span>
@@ -1373,15 +1405,15 @@
   <div class="meta-grid">
     <div class="meta-cell"><div class="mc-k">Repository</div><div class="mc-v">kuja53/linter-test</div></div>
     <div class="meta-cell"><div class="mc-k">Branch / Ref</div><div class="mc-v">main</div></div>
-    <div class="meta-cell"><div class="mc-k">Commit</div><div class="mc-v">c9df631</div></div>
+    <div class="meta-cell"><div class="mc-k">Commit</div><div class="mc-v">a637629</div></div>
     <div class="meta-cell"><div class="mc-k">Triggered by</div><div class="mc-v">kuja53</div></div>
     <div class="meta-cell"><div class="mc-k">Event</div><div class="mc-v">push</div></div>
-    <div class="meta-cell"><div class="mc-k">Run ID</div><div class="mc-v">#12 · 25375080012</div></div>
+    <div class="meta-cell"><div class="mc-k">Run ID</div><div class="mc-v">#13 · 25375566883</div></div>
   </div>
 
 </div>
 
-<footer>Generated by ArgoCD Lint Workflow &nbsp;·&nbsp; 2026-05-05 12:01 UTC</footer>
+<footer>Generated by ArgoCD Lint Workflow &nbsp;·&nbsp; 2026-05-05 12:11 UTC</footer>
 
 <script>
   function toggleLog(id) {
