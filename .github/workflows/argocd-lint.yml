@@ -18,6 +18,12 @@ env:
   MANIFESTS_PATH: "__BOOTSTRAP__/configs"
   CHARTS_PATH: "__BOOTSTRAP__/configs"
 
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
 jobs:
   # ─────────────────────────────────────────────
   # Job 1: YAML syntax validation
@@ -35,7 +41,15 @@ jobs:
       - name: Run yamllint
         continue-on-error: true
         run: |
-          yamllint $(find . -name "*.yaml" -o -name "*.yml" | grep -v ".github" | grep -v "node_modules" | grep -v templates | grep -v values)
+          yamllint $(find . -name "*.yaml" -o -name "*.yml" | grep -v ".github" | grep -v "node_modules" | grep -v templates | grep -v values) | tee /tmp/yamllint.log
+      
+      - name: Upload log artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lint-log-yamllint
+          path: /tmp/yamllint.log
+          retention-days: 7
 
   # ─────────────────────────────────────────────
   # Job 2: ArgoCD Application manifest validation
@@ -65,7 +79,8 @@ jobs:
             -kubernetes-version "$K8S_VERSION" \
             -schema-location default \
             -schema-location "https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json" \
-            -ignore-missing-schemas
+            -ignore-missing-schemas | \
+          tee /tmp/argocd-app-lint.log
 
       - name: Validate all manifests in manifests path
         if: ${{ env.MANIFESTS_PATH != '' }}
@@ -79,7 +94,16 @@ jobs:
             -kubernetes-version "$K8S_VERSION" \
             -schema-location default \
             -schema-location "https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json" \
-            -ignore-missing-schemas
+            -ignore-missing-schemas | \
+          tee /tmp/manifests-lint.log
+      
+      - name: Upload log artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lint-log-argocdi-manifest-app
+          path: /tmp/*.log
+          retention-days: 7
 
 
   # ─────────────────────────────────────────────
@@ -186,6 +210,109 @@ jobs:
                    xargs grep -l "kind: Application" 2>/dev/null)
 
           exit $EXIT_CODE
+  
+
+  # ─────────────────────────────────────────────
+  # Job 5: Generate HTML report + publish
+  # ─────────────────────────────────────────────
+  report:
+    name: Generate & Publish Report
+    runs-on: ubuntu-latest
+    needs:
+      - yamllint
+      - argocd-app-lint
+      - helm-lint
+      - argocd-cli-lint
+    if: always()
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+ 
+      - name: Download all lint log artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: lint-log-*
+          path: /tmp/lint-logs
+          merge-multiple: false
+ 
+      - name: Generate HTML report
+        env:
+          GITHUB_RUN_ID:     ${{ github.run_id }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA:        ${{ github.sha }}
+          GITHUB_REF_NAME:   ${{ github.ref_name }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_ACTOR:      ${{ github.actor }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          JOB_RESULTS: >-
+            {
+              "yamllint":        "${{ needs.yamllint.result }}",
+              "argocd-app-lint": "${{ needs.argocd-app-lint.result }}",
+              "helm-lint":       "${{ needs.helm-lint.result }}",
+              "argocd-cli-lint": "${{ needs.argocd-cli-lint.result }}"
+            }
+        run: python3 .github/scripts/generate_lint_report.py
+ 
+      - name: Write GitHub Step Summary
+        if: always()
+        run: cat /tmp/lint-report/index.html >> $GITHUB_STEP_SUMMARY
+ 
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name != 'pull_request' && always() }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+ 
+          cp /tmp/lint-report/index.html /tmp/index.html
+ 
+          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
+            git fetch origin gh-pages
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . || true
+          fi
+ 
+          cp /tmp/index.html index.html
+          git add index.html
+          git commit -m "ci: lint report run #${{ github.run_number }} (${GITHUB_SHA::7})" || true
+          git push origin gh-pages
+ 
+      - name: Post PR comment
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const results = {
+              'YAML Lint':        '${{ needs.yamllint.result }}',
+              'ArgoCD App Lint':  '${{ needs.argocd-app-lint.result }}',
+              'Helm Lint':        '${{ needs.helm-lint.result }}',
+              'ArgoCD CLI Lint':  '${{ needs.argocd-cli-lint.result }}',
+            };
+            const icon = r => ({ success: '✅', failure: '❌', skipped: '⏭️' }[r] ?? '❓');
+            const rows = Object.entries(results)
+              .map(([name, r]) => `| ${icon(r)} | \`${name}\` | **${r.toUpperCase()}** |`)
+              .join('\n');
+            const runUrl = `${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
+            const body = [
+              '## ⎈ ArgoCD Lint Report',
+              '',
+              '| | Job | Result |',
+              '|---|---|---|',
+              rows,
+              '',
+              `> 📋 Full report with logs → [Actions Summary](${runUrl})`,
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+  
+            });
 
   # ─────────────────────────────────────────────
   # Summary gate — all lint jobs must pass
