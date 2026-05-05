@@ -14,7 +14,7 @@ env:
   # Kubernetes version to validate against (update as needed)
   K8S_VERSION: "1.31.14"
   # Path to your ArgoCD app definitions and manifests
-  ARGOCD_APPS_PATH: "__BOOTSTRAP__/"
+  ARGOCD_APPS_PATH: "__BOOTSTRAP__/apps/"
   MANIFESTS_PATH: "__BOOTSTRAP__/configs"
   CHARTS_PATH: "__BOOTSTRAP__/configs"
 
@@ -154,8 +154,6 @@ jobs:
   argocd-cli-lint:
     name: ArgoCD CLI App Lint
     runs-on: ubuntu-latest
-    # Remove this condition if you always want this job
-    if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
