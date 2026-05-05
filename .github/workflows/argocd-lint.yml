@@ -33,8 +33,7 @@ jobs:
         run: pip install yamllint
 
       - name: Run yamllint
-        with:
-            fail-on-error: false
+        continue-on-error: true
         run: |
           yamllint $(find . -name "*.yaml" -o -name "*.yml" | grep -v ".github" | grep -v "node_modules" | grep -v templates | grep -v values)
 
@@ -54,8 +53,7 @@ jobs:
             | tar xz -C /usr/local/bin
 
       - name: Validate ArgoCD Application CRDs with kubeconform
-        with:
-            fail-on-error: false
+        continue-on-error: true
         run: |
           # Validate ArgoCD-specific CRDs (Application, AppProject, ApplicationSet)
           # Using the datreeio CRD schema catalog
@@ -71,8 +69,7 @@ jobs:
 
       - name: Validate all manifests in manifests path
         if: ${{ env.MANIFESTS_PATH != '' }}
-        with:
-            fail-on-error: false
+        continue-on-error: true
         run: |
           find "$MANIFESTS_PATH" -name "*.yaml" -o -name "*.yml" 2>/dev/null | grep -v templates | grep -v values | \
           xargs -r kubeconform \
@@ -107,8 +104,7 @@ jobs:
             | tar xz -C /usr/local/bin
 
       - name: Lint all Helm charts
-        with:
-            fail-on-error: false
+        continue-on-error: true
         run: |
           EXIT_CODE=0
 
