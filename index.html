@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArgoCD Lint · kuja53/linter-test #11</title>
+  <title>ArgoCD Lint · kuja53/linter-test #12</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -316,8 +316,8 @@
 <div class="topbar">
   <div class="tb-brand">⎈ <em>ArgoCD</em> Lint Report</div>
   <div class="tb-run">
-    <a href="https://github.com/kuja53/linter-test/actions/runs/25373761881" target="_blank" rel="noopener">Run #11</a>
-    &nbsp;·&nbsp; 2026-05-05 11:31 UTC
+    <a href="https://github.com/kuja53/linter-test/actions/runs/25375080012" target="_blank" rel="noopener">Run #12</a>
+    &nbsp;·&nbsp; 2026-05-05 12:01 UTC
   </div>
 </div>
 
@@ -330,7 +330,7 @@
     </div>
     <h1>linter-test</h1>
     <div class="hero-meta">
-      <b>main</b> &nbsp;·&nbsp; <b>952ec3f</b>
+      <b>main</b> &nbsp;·&nbsp; <b>c9df631</b>
       &nbsp;·&nbsp; kuja53 via push
     </div>
 
@@ -338,7 +338,7 @@
       <div class="score-tile st-total"><div class="n">0</div><div class="l">Jobs run</div></div>
       <div class="score-tile st-pass"> <div class="n">0</div><div class="l">Passed</div></div>
       <div class="score-tile st-fail"> <div class="n">0</div><div class="l">Failed</div></div>
-      <div class="score-tile st-skip"> <div class="n">4</div><div class="l">Skipped</div></div>
+      <div class="score-tile st-skip"> <div class="n">3</div><div class="l">Skipped</div></div>
     </div>
   </div>
 
@@ -355,33 +355,21 @@
       
       <div class="log-wrap" id="log-yaml-lint" style="display:none">
         <pre class='log-block'>::group::./__BOOTSTRAP__/configs/vault/Chart.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/vault/Chart.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/vault/Chart.yaml,line=9,col=1::9:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/vault/Chart.yaml,line=19,col=1::19:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/system-scripts/certificates.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/certificates.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/certificates.yaml,line=3,col=201::3:201 [line-length] line too long (2691 &gt; 200 characters)</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/certificates.yaml,line=4,col=201::4:201 [line-length] line too long (4375 &gt; 200 characters)</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-crb.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-crb.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-cr.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-cr.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-cr.yaml,line=12,col=201::12:201 [line-length] line too long (215 &gt; 200 characters)</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/system-scripts/cluster-admin-custom-cr.yaml,line=15,col=201::15:201 [line-length] line too long (317 &gt; 200 characters)</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-regional-dr.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-regional-dr.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-regional-dr.yaml,line=9,col=1::9:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-regional-dr.yaml,line=10,col=3::10:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-regional-dr.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -389,7 +377,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-sysmon.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-sysmon.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-sysmon.yaml,line=10,col=1::10:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-sysmon.yaml,line=11,col=3::11:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-sysmon.yaml,line=13,col=3::13:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -400,12 +387,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-privileged.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-privileged.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-privileged.yaml,line=13,col=1::13:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-monitor.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-monitor.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-monitor.yaml,line=9,col=1::9:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-monitor.yaml,line=10,col=3::10:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-monitor.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -413,16 +398,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-regional-dr.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-regional-dr.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-regional-dr.yaml,line=13,col=1::13:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-dns.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-dns.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-asyncreplications.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-asyncreplications.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-asyncreplications.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-asyncreplications.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-asyncreplications.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -438,7 +417,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-recoverygroups.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-recoverygroups.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-recoverygroups.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-recoverygroups.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-recoverygroups.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -447,12 +425,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-operator.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-operator.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-operator.yaml,line=3,col=1::3:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-approvalrequests.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-approvalrequests.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-approvalrequests.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-approvalrequests.scale.spectrum.ibm.com.yaml,line=21,col=5::21:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-approvalrequests.scale.spectrum.ibm.com.yaml,line=25,col=3::25:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -469,7 +445,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclustertiebreakers.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclustertiebreakers.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclustertiebreakers.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclustertiebreakers.scale.spectrum.ibm.com.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclustertiebreakers.scale.spectrum.ibm.com.yaml,line=67,col=17::67:17 [indentation] wrong indentation: expected 18 but found 16</span>
@@ -480,7 +455,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumes.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumes.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumes.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumes.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumes.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -490,7 +464,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-guis.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-guis.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-guis.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-guis.scale.spectrum.ibm.com.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-guis.scale.spectrum.ibm.com.yaml,line=67,col=23::67:23 [indentation] wrong indentation: expected 24 but found 22</span>
@@ -504,7 +477,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnss.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnss.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnss.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnss.scale.spectrum.ibm.com.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnss.scale.spectrum.ibm.com.yaml,line=107,col=21::107:21 [indentation] wrong indentation: expected 22 but found 20</span>
@@ -515,7 +487,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-maintenance.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-maintenance.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-maintenance.yaml,line=9,col=1::9:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-maintenance.yaml,line=10,col=3::10:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-maintenance.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -523,7 +494,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumeoperations.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumeoperations.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumeoperations.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumeoperations.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-cachevolumeoperations.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -537,12 +507,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-operator.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-operator.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrolebinding-ibm-spectrum-scale-operator.yaml,line=13,col=1::13:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/deployment-ibm-spectrum-scale-controller-manager.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/deployment-ibm-spectrum-scale-controller-manager.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/deployment-ibm-spectrum-scale-controller-manager.yaml,line=29,col=11::29:11 [indentation] wrong indentation: expected 12 but found 10</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/deployment-ibm-spectrum-scale-controller-manager.yaml,line=31,col=15::31:15 [indentation] wrong indentation: expected 16 but found 14</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/deployment-ibm-spectrum-scale-controller-manager.yaml,line=36,col=15::36:15 [indentation] wrong indentation: expected 16 but found 14</span>
@@ -563,7 +531,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-remoteclusters.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-remoteclusters.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-remoteclusters.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-remoteclusters.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-remoteclusters.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -577,12 +544,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-dns.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-dns.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-dns.yaml,line=3,col=1::3:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusters.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusters.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusters.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusters.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusters.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -638,7 +603,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrexports.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrexports.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrexports.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrexports.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrexports.scale.spectrum.ibm.com.yaml,line=24,col=3::24:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -649,7 +613,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-filesystems.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-filesystems.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-filesystems.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-filesystems.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-filesystems.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -671,7 +634,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-daemons.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-daemons.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-daemons.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-daemons.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-daemons.scale.spectrum.ibm.com.yaml,line=24,col=3::24:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -724,7 +686,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-compressionjobs.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-compressionjobs.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-compressionjobs.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-compressionjobs.scale.spectrum.ibm.com.yaml,line=20,col=5::20:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-compressionjobs.scale.spectrum.ibm.com.yaml,line=25,col=3::25:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -738,7 +699,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-pmcollectors.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-pmcollectors.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-pmcollectors.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-pmcollectors.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-pmcollectors.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -753,7 +713,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-csiscaleoperators.csi.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-csiscaleoperators.csi.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-csiscaleoperators.csi.ibm.com.yaml,line=11,col=5::11:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-csiscaleoperators.csi.ibm.com.yaml,line=16,col=5::16:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-csiscaleoperators.csi.ibm.com.yaml,line=20,col=3::20:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -798,7 +757,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-localdisks.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-localdisks.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-localdisks.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-localdisks.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-localdisks.scale.spectrum.ibm.com.yaml,line=24,col=3::24:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -813,7 +771,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-callhomes.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-callhomes.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-callhomes.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-callhomes.scale.spectrum.ibm.com.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-callhomes.scale.spectrum.ibm.com.yaml,line=22,col=5::22:5 [indentation] wrong indentation: expected 6 but found 4</span>
@@ -828,17 +785,14 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-core.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-core.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-core.yaml,line=3,col=1::3:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-kthread-binding.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-kthread-binding.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-kthread-binding.yaml,line=14,col=1::14:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -850,21 +804,11 @@
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-encryptionconfigs.scale.spectrum.ibm.com.yaml,line=191,col=19::191:19 [indentation] wrong indentation: expected 20 but found 18</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-operator.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-operator.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-default.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-default.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-default.yaml,line=4,col=1::4:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/configmap-ibm-spectrum-scale-manager-config.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/configmap-ibm-spectrum-scale-manager-config.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-leader-election-role.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-leader-election-role.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-leader-election-role.yaml,line=10,col=1::10:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-leader-election-role.yaml,line=11,col=3::11:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-leader-election-role.yaml,line=14,col=3::14:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -875,7 +819,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusterinterconnects.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusterinterconnects.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusterinterconnects.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusterinterconnects.scale.spectrum.ibm.com.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-clusterinterconnects.scale.spectrum.ibm.com.yaml,line=22,col=5::22:5 [indentation] wrong indentation: expected 6 but found 4</span>
@@ -884,7 +827,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-diskjobs.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-diskjobs.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-diskjobs.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-diskjobs.scale.spectrum.ibm.com.yaml,line=22,col=3::22:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-diskjobs.scale.spectrum.ibm.com.yaml,line=23,col=5::23:5 [indentation] wrong indentation: expected 6 but found 4</span>
@@ -900,12 +842,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/service-ibm-spectrum-scale-webhook-service.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/service-ibm-spectrum-scale-webhook-service.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/service-ibm-spectrum-scale-webhook-service.yaml,line=13,col=3::13:3 [indentation] wrong indentation: expected 4 but found 2</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-regional-dr.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-regional-dr.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-regional-dr.yaml,line=10,col=1::10:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-regional-dr.yaml,line=11,col=3::11:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/role-ibm-spectrum-scale-regional-dr.yaml,line=13,col=3::13:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -914,7 +854,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-restripefsjobs.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-restripefsjobs.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-restripefsjobs.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-restripefsjobs.scale.spectrum.ibm.com.yaml,line=22,col=3::22:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-restripefsjobs.scale.spectrum.ibm.com.yaml,line=23,col=5::23:5 [indentation] wrong indentation: expected 6 but found 4</span>
@@ -930,7 +869,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-consistencygroups.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-consistencygroups.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-consistencygroups.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-consistencygroups.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-consistencygroups.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -940,7 +878,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-grafanabridges.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-grafanabridges.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-grafanabridges.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-grafanabridges.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-grafanabridges.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -949,7 +886,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnsconfigs.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnsconfigs.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnsconfigs.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnsconfigs.scale.spectrum.ibm.com.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-dnsconfigs.scale.spectrum.ibm.com.yaml,line=77,col=17::77:17 [indentation] wrong indentation: expected 18 but found 16</span>
@@ -958,16 +894,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-regional-dr.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-regional-dr.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-regional-dr.yaml,line=14,col=1::14:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-csi.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/namespace-ibm-spectrum-scale-csi.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusters.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusters.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusters.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusters.scale.spectrum.ibm.com.yaml,line=20,col=5::20:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusters.scale.spectrum.ibm.com.yaml,line=24,col=3::24:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -981,7 +911,6 @@
 ::endgroup::
 
 <span class="log-ok">::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/validatingwebhookconfiguration-ibm-spectrum-scale-validating-webhook-configuration.yaml</span>
-<span class="log-ok">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/validatingwebhookconfiguration-ibm-spectrum-scale-validating-webhook-configuration.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-ok">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/validatingwebhookconfiguration-ibm-spectrum-scale-validating-webhook-configuration.yaml,line=11,col=1::11:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-ok">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/validatingwebhookconfiguration-ibm-spectrum-scale-validating-webhook-configuration.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-ok">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/validatingwebhookconfiguration-ibm-spectrum-scale-validating-webhook-configuration.yaml,line=22,col=5::22:5 [indentation] wrong indentation: expected 6 but found 4</span>
@@ -1048,7 +977,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-upgradeapprovals.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-upgradeapprovals.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-upgradeapprovals.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-upgradeapprovals.scale.spectrum.ibm.com.yaml,line=21,col=5::21:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-upgradeapprovals.scale.spectrum.ibm.com.yaml,line=25,col=3::25:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -1064,32 +992,26 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-sysmon.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-sysmon.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-sysmon.yaml,line=14,col=1::14:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-privileged.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-privileged.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-privileged.yaml,line=14,col=1::14:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-pmcollector.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-pmcollector.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-pmcollector.yaml,line=4,col=1::4:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-leader-election-rolebinding.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-leader-election-rolebinding.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/rolebinding-ibm-spectrum-scale-leader-election-rolebinding.yaml,line=14,col=1::14:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-regional-dr.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-regional-dr.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-regional-dr.yaml,line=3,col=1::3:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusterinitnodes.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusterinitnodes.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusterinitnodes.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusterinitnodes.scale.spectrum.ibm.com.yaml,line=20,col=5::20:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-stretchclusterinitnodes.scale.spectrum.ibm.com.yaml,line=24,col=3::24:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -1100,14 +1022,12 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-volumes.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-volumes.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-volumes.scale.spectrum.ibm.com.yaml,line=19,col=3::19:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-volumes.scale.spectrum.ibm.com.yaml,line=60,col=19::60:19 [indentation] wrong indentation: expected 20 but found 18</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-volumes.scale.spectrum.ibm.com.yaml,line=77,col=13::77:13 [indentation] wrong indentation: expected 14 but found 12</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/mutatingwebhookconfiguration-ibm-spectrum-scale-mutating-webhook-configuration.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/mutatingwebhookconfiguration-ibm-spectrum-scale-mutating-webhook-configuration.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/mutatingwebhookconfiguration-ibm-spectrum-scale-mutating-webhook-configuration.yaml,line=11,col=1::11:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/mutatingwebhookconfiguration-ibm-spectrum-scale-mutating-webhook-configuration.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/mutatingwebhookconfiguration-ibm-spectrum-scale-mutating-webhook-configuration.yaml,line=21,col=3::21:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -1124,7 +1044,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrs.scale.spectrum.ibm.com.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrs.scale.spectrum.ibm.com.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrs.scale.spectrum.ibm.com.yaml,line=14,col=5::14:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrs.scale.spectrum.ibm.com.yaml,line=19,col=5::19:5 [indentation] wrong indentation: expected 6 but found 4</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/customresourcedefinition-regionaldrs.scale.spectrum.ibm.com.yaml,line=23,col=3::23:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -1134,7 +1053,6 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-operator.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-operator.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-operator.yaml,line=9,col=1::9:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-operator.yaml,line=10,col=3::10:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-operator.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -1280,12 +1198,10 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-gui.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-gui.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/serviceaccount-ibm-spectrum-scale-gui.yaml,line=4,col=1::4:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-privileged.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-privileged.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-privileged.yaml,line=9,col=1::9:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-privileged.yaml,line=10,col=3::10:3 [indentation] wrong indentation: expected 4 but found 2</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-operators/clusterrole-ibm-spectrum-scale-privileged.yaml,line=12,col=3::12:3 [indentation] wrong indentation: expected 4 but found 2</span>
@@ -1294,74 +1210,44 @@
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/consul/Chart.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/consul/Chart.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/consul/Chart.yaml,line=30,col=1::30:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/configs/grafana/Chart.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/grafana/Chart.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/grafana/Chart.yaml,line=15,col=1::15:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/grafana/Chart.yaml,line=19,col=1::19:1 [indentation] wrong indentation: expected 2 but found 0</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/configs/grafana/Chart.yaml,line=35,col=1::35:1 [indentation] wrong indentation: expected 2 but found 0</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/configs/ibm-cnsa-config/Chart.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/configs/ibm-cnsa-config/Chart.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
-::group::./__BOOTSTRAP__/apps/cluster-a/system-scripts.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/system-scripts.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/apps/cluster-a/vault.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/vault.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/vault.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-operators.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-operators.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-config.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-config.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/ibm-spectrum-scale-config.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/apps/cluster-a/consul.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/consul.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/consul.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/apps/cluster-a/grafana.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/grafana.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-a/grafana.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/apps/cluster-b/system-scripts.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/system-scripts.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/apps/cluster-b/vault.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/vault.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/vault.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
-::group::./__BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-operators.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-operators.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
-::endgroup::
-
 ::group::./__BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-config.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-config.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/ibm-spectrum-scale-config.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/apps/cluster-b/consul.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/consul.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/consul.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 
 ::group::./__BOOTSTRAP__/apps/cluster-b/grafana.yaml
-<span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/grafana.yaml,line=1,col=1::1:1 [document-start] missing document start "---"</span>
 <span class="log-warn">::warning file=./__BOOTSTRAP__/apps/cluster-b/grafana.yaml,line=14,col=7::14:7 [indentation] wrong indentation: expected 8 but found 6</span>
 ::endgroup::
 </pre>
@@ -1377,20 +1263,8 @@
       </div>
       
       <div class="log-wrap" id="log-argocd-app-lint" style="display:none">
-        <pre class='log-block'><span class="log-error">Summary: 12 resources found in 12 files - Valid: 12, Invalid: 0, Errors: 0, Skipped: 0</span></pre>
-      </div>
-    </div>
-
-    <div class="job-card card-skip">
-      <div class="job-header" onclick="toggleLog('log-manifest-app-lint')">
-        <span class="job-icon">–</span>
-        <span class="job-name">Manifest App Lint</span>
-        <span class="badge badge-skip">SKIP</span>
-        <span class="expand-hint" id="hint-log-manifest-app-lint">▼ show log</span>
-      </div>
-      
-      <div class="log-wrap" id="log-manifest-app-lint" style="display:none">
-        <pre class='log-block'><span class="log-error">Summary: 65 resources found in 65 files - Valid: 35, Invalid: 0, Errors: 0, Skipped: 30</span></pre>
+        <pre class='log-block'><span class="log-error">Summary: 12 resources found in 12 files - Valid: 12, Invalid: 0, Errors: 0, Skipped: 0</span>
+<span class="log-error">Summary: 65 resources found in 65 files - Valid: 35, Invalid: 0, Errors: 0, Skipped: 30</span></pre>
       </div>
     </div>
 
@@ -1412,6 +1286,40 @@
 <span class="log-error">1 chart(s) linted, 0 chart(s) failed</span>
 <span class="log-ok">▶ Templating &amp; validating: __BOOTSTRAP__/configs/consul</span>
 <span class="log-error">Summary: 67 resources found parsing stdin - Valid: 36, Invalid: 0, Errors: 0, Skipped: 31</span>
+<span class="log-ok">▶ Validating: __BOOTSTRAP__/configs/consul</span>
+<span class="log-error">ERROR: Testing failed: kubeconform failed: failed to run kubeconform: rc=1</span>
+<span class="log-error">stdin - CustomResourceDefinition controlplanerequestlimits.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition exportedservices.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition gatewayclassconfigs.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition gatewayclasses.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition gatewaypolicies.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition gateways.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition grpcroutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition ingressgateways.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition jwtproviders.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition meshes.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition meshservices.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition proxydefaults.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition referencegrants.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition registrations.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition routeauthfilters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition routeretryfilters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition routetimeoutfilters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition samenessgroups.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition httproutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition serviceintentions.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition servicedefaults.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition serviceresolvers.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition servicesplitters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition servicerouters.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition terminatinggateways.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition tcproutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition trafficpermissions.auth.consul.hashicorp.com failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition tlsroutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - CustomResourceDefinition udproutes.gateway.networking.k8s.io failed validation: could not find schema for CustomResourceDefinition</span>
+<span class="log-error">stdin - PodDisruptionBudget release-name-consul-connect-injector failed validation: could not find schema for PodDisruptionBudget</span>
+<span class="log-error">stdin - PodDisruptionBudget release-name-consul-server failed validation: could not find schema for PodDisruptionBudget</span>
+<span class="log-error">Error: plugin "kubeconform" exited with error</span>
 <span class="log-ok">✓ OK: __BOOTSTRAP__/configs/consul</span>
 <span class="log-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 <span class="log-section">▶ Linting chart: __BOOTSTRAP__/configs/grafana</span>
@@ -1421,7 +1329,8 @@
 <span class="log-ok">▶ Templating &amp; validating: __BOOTSTRAP__/configs/grafana</span>
 <span class="log-error">[31m✖[0m stdin: [31mfailed validation:  error while parsing: missing 'kind' key[0m</span>
 <span class="log-error">Summary: 13 resources found parsing stdin - Valid: 12, Invalid: 0, Errors: 1, Skipped: 0</span>
-<span class="log-error">✗ kubeconform FAILED: __BOOTSTRAP__/configs/grafana</span>
+<span class="log-ok">▶ Validating: __BOOTSTRAP__/configs/grafana</span>
+<span class="log-ok">✓ OK: __BOOTSTRAP__/configs/grafana</span>
 <span class="log-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 <span class="log-section">▶ Linting chart: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
 <span class="log-section">==&gt; Linting __BOOTSTRAP__/configs/ibm-cnsa-config</span>
@@ -1433,6 +1342,19 @@
 <span class="log-error">1 chart(s) linted, 0 chart(s) failed</span>
 <span class="log-ok">▶ Templating &amp; validating: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
 <span class="log-error">Summary: 16 resources found parsing stdin - Valid: 10, Invalid: 0, Errors: 0, Skipped: 6</span>
+<span class="log-ok">▶ Validating: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
+<span class="log-error">ERROR: Testing failed: kubeconform failed: failed to run kubeconform: rc=1</span>
+<span class="log-error">stdin - GrafanaBridge grafanabridge failed validation: could not find schema for GrafanaBridge</span>
+<span class="log-error">stdin - Cluster ibm-spectrum-scale failed validation: could not find schema for Cluster</span>
+<span class="log-error">stdin - failed validation: could not find schema for Filesystem</span>
+<span class="log-error">stdin - MachineConfig 00-worker-ibm-spectrum-scale-kernel-devel failed validation: could not find schema for MachineConfig</span>
+<span class="log-error">stdin - failed validation: could not find schema for RemoteCluster</span>
+<span class="log-error">stdin - ServiceMonitor gpfs-filesystem failed validation: could not find schema for ServiceMonitor</span>
+<span class="log-error">stdin - ServiceMonitor gpfs-metrics failed validation: could not find schema for ServiceMonitor</span>
+<span class="log-error">stdin - ServiceMonitor gpfs-fileset failed validation: could not find schema for ServiceMonitor</span>
+<span class="log-error">stdin - ServiceMonitor gpfs-mmhealth failed validation: could not find schema for ServiceMonitor</span>
+<span class="log-error">stdin - Route grafanabridge failed validation: could not find schema for Route</span>
+<span class="log-error">Error: plugin "kubeconform" exited with error</span>
 <span class="log-ok">✓ OK: __BOOTSTRAP__/configs/ibm-cnsa-config</span>
 <span class="log-section">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 <span class="log-section">▶ Linting chart: __BOOTSTRAP__/configs/vault</span>
@@ -1441,6 +1363,7 @@
 <span class="log-error">1 chart(s) linted, 0 chart(s) failed</span>
 <span class="log-ok">▶ Templating &amp; validating: __BOOTSTRAP__/configs/vault</span>
 <span class="log-error">Summary: 13 resources found parsing stdin - Valid: 13, Invalid: 0, Errors: 0, Skipped: 0</span>
+<span class="log-ok">▶ Validating: __BOOTSTRAP__/configs/vault</span>
 <span class="log-ok">✓ OK: __BOOTSTRAP__/configs/vault</span></pre>
       </div>
     </div>
@@ -1450,15 +1373,15 @@
   <div class="meta-grid">
     <div class="meta-cell"><div class="mc-k">Repository</div><div class="mc-v">kuja53/linter-test</div></div>
     <div class="meta-cell"><div class="mc-k">Branch / Ref</div><div class="mc-v">main</div></div>
-    <div class="meta-cell"><div class="mc-k">Commit</div><div class="mc-v">952ec3f</div></div>
+    <div class="meta-cell"><div class="mc-k">Commit</div><div class="mc-v">c9df631</div></div>
     <div class="meta-cell"><div class="mc-k">Triggered by</div><div class="mc-v">kuja53</div></div>
     <div class="meta-cell"><div class="mc-k">Event</div><div class="mc-v">push</div></div>
-    <div class="meta-cell"><div class="mc-k">Run ID</div><div class="mc-v">#11 · 25373761881</div></div>
+    <div class="meta-cell"><div class="mc-k">Run ID</div><div class="mc-v">#12 · 25375080012</div></div>
   </div>
 
 </div>
 
-<footer>Generated by ArgoCD Lint Workflow &nbsp;·&nbsp; 2026-05-05 11:31 UTC</footer>
+<footer>Generated by ArgoCD Lint Workflow &nbsp;·&nbsp; 2026-05-05 12:01 UTC</footer>
 
 <script>
   function toggleLog(id) {
