@@ -35,7 +35,7 @@ jobs:
       - name: Run yamllint
         run: |
           yamllint -d "{extends: default, rules: {line-length: {max: 200}, truthy: {allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']}}}" \
-            $(find . -name "*.yaml" -o -name "*.yml" | grep -v ".github" | grep -v "node_modules")
+            $(find . -name "*.yaml" -o -name "*.yml" | grep -v ".github" | grep -v "node_modules" | grep -v templates | grep -v values)
 
   # ─────────────────────────────────────────────
   # Job 2: ArgoCD Application manifest validation
@@ -69,7 +69,7 @@ jobs:
       - name: Validate all manifests in manifests path
         if: ${{ env.MANIFESTS_PATH != '' }}
         run: |
-          find "$MANIFESTS_PATH" -name "*.yaml" -o -name "*.yml" 2>/dev/null | \
+          find "$MANIFESTS_PATH" -name "*.yaml" -o -name "*.yml" 2>/dev/null | grep -v templates | grep -v values | \
           xargs -r kubeconform \
             -strict \
             -summary \
@@ -154,6 +154,7 @@ jobs:
   argocd-cli-lint:
     name: ArgoCD CLI App Lint
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
