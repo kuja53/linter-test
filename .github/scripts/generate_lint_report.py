@@ -40,7 +40,6 @@ log_map = {
     "ArgoCD App Lint": ("lint-log-argocd-manifest-app/argocd-app-lint.log", "argocd-app-lint"),
     "Manifest App Lint": ("lint-log-argocd-manifest-app/manifests-lint.log", "manifests-app-lint"),
     "Helm Lint":       ("lint-log-helm/helm-lint.log",             "helm-lint"),
-    "ArgoCD CLI Lint": ("lint-log-argocd-cli/argocd-cli-lint.log", "argocd-cli-lint"),
 }
 
 
