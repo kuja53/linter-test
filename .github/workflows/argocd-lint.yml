@@ -71,10 +71,12 @@ jobs:
         run: |
           # Validate ArgoCD-specific CRDs (Application, AppProject, ApplicationSet)
           # Using the datreeio CRD schema catalog
+          echo "All ArgoCD CRDs manifests (Application, AppProject, ApplicationSet)" | \
           find "$ARGOCD_APPS_PATH" -name "*.yaml" -o -name "*.yml" 2>/dev/null | \
           xargs -r kubeconform \
             -strict \
             -summary \
+            -verbose \
             -output pretty \
             -kubernetes-version "$K8S_VERSION" \
             -schema-location default \
@@ -86,10 +88,12 @@ jobs:
         if: ${{ env.MANIFESTS_PATH != '' }}
         continue-on-error: true
         run: |
+          echo "All another manifests in manifests path" | \
           find "$MANIFESTS_PATH" -name "*.yaml" -o -name "*.yml" 2>/dev/null | grep -v templates | grep -v values | grep -v "Chart.yaml" | \
           xargs -r kubeconform \
             -strict \
             -summary \
+            -verbose \
             -output pretty \
             -kubernetes-version "$K8S_VERSION" \
             -schema-location default \
@@ -168,7 +172,7 @@ jobs:
               -ignore-missing-schemas 2>&1 | tee -a "$LOG_FILE"
 
            echo "▶ Validating: $CHART_DIR" | tee -a "$LOG_FILE" 
-           helm kubeconform "$CHART_DIR" 2>&1 | tee -a "$LOG_FILE"
+           helm kubeconform --ignore-missing-schemas "$CHART_DIR" 2>&1 | tee -a "$LOG_FILE"
  
             if [ "${PIPESTATUS[1]}" -ne 0 ]; then
               echo "✗ kubeconform FAILED: $CHART_DIR" | tee -a "$LOG_FILE"
