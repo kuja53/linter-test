@@ -164,15 +164,17 @@ jobs:
             fi
             
             echo "▶ Templating & validating: $CHART_DIR" | tee -a "$LOG_FILE"
+          
             helm template release "$CHART_DIR" 2>&1 | kubeconform \
-              -strict -summary -output pretty \
+              -verbose -strict -summary -output pretty \
               -kubernetes-version "$K8S_VERSION" \
               -schema-location default \
               -schema-location "https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json" \
               -ignore-missing-schemas 2>&1 | tee -a "$LOG_FILE"
 
-           echo "▶ Validating: $CHART_DIR" | tee -a "$LOG_FILE" 
-           helm kubeconform --ignore-missing-schemas "$CHART_DIR" 2>&1 | tee -a "$LOG_FILE"
+            echo "▶ Validating: $CHART_DIR" | tee -a "$LOG_FILE" 
+            
+            helm kubeconform --verbose --ignore-missing-schemas "$CHART_DIR" 2>&1 | tee -a "$LOG_FILE"
  
             if [ "${PIPESTATUS[1]}" -ne 0 ]; then
               echo "✗ kubeconform FAILED: $CHART_DIR" | tee -a "$LOG_FILE"
