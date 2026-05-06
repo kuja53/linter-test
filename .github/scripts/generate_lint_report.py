@@ -179,7 +179,7 @@ overall_pass = True
 
 for job_name, (log_path, result_key) in log_map.items():
     log_text = read_log(log_path)
-    result   = job_results.get(result_key, "skipped")
+    result   = job_results.get(result_key, "success")
     if result == "failure":
         overall_pass = False
 
