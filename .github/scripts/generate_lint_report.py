@@ -11,6 +11,7 @@ import os
 import sys
 import json
 import re
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -42,9 +43,56 @@ log_map = {
 }
 
 
+# ── ANSI escape code pattern (covers colors, cursor moves, erase sequences) ───
+_ANSI_RE = re.compile(r"\x1b(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
+
+# ── Box-drawing / arrow Unicode → plain ASCII replacements ────────────────────
+# Keeps the semantic meaning visible without relying on font coverage or
+# characters that confuse HTML renderers / GitHub Step Summary sanitizers.
+_UNICODE_SUBS: list[tuple[str, str]] = [
+    # Kubeconform / custom script decorators
+    ("━", "-"),   # BOX DRAWINGS HEAVY HORIZONTAL  → section divider
+    ("▶", ">"),   # BLACK RIGHT-POINTING TRIANGLE   → step prefix
+    ("✓", "[OK]"),  # CHECK MARK
+    ("✗", "[FAIL]"),# BALLOT X
+    ("⚠", "[WARN]"),# WARNING SIGN
+    ("ℹ", "[INFO]"),# INFORMATION SOURCE
+    # Arrows used by some tools
+    ("→", "->"),
+    ("←", "<-"),
+    ("↑", "^"),
+    ("↓", "v"),
+    # Yamllint uses these in its output sometimes
+    ("·", "."),
+]
+
+def _strip_ansi(text: str) -> str:
+    """Remove all ANSI/VT100 escape sequences."""
+    return _ANSI_RE.sub("", text)
+
+def _normalize_unicode(text: str) -> str:
+    """Replace known problematic Unicode glyphs with ASCII equivalents,
+    then strip any remaining non-ASCII control characters."""
+    for uni, asc in _UNICODE_SUBS:
+        text = text.replace(uni, asc)
+    # Remove C0/C1 control chars except tab, LF, CR
+    text = "".join(
+        ch for ch in text
+        if ch in ("\t", "\n", "\r") or (ord(ch) >= 0x20 and unicodedata.category(ch) != "Cc")
+    )
+    return text
+
+def clean_log(raw: str) -> str:
+    """Full cleaning pipeline: ANSI → Unicode normalize → strip control chars."""
+    return _normalize_unicode(_strip_ansi(raw))
+
+
 def read_log(rel_path: str) -> str | None:
     full = LOG_DIR / rel_path
-    return full.read_text(errors="replace") if full.exists() else None
+    if not full.exists():
+        return None
+    raw = full.read_text(errors="replace")
+    return clean_log(raw)
 
 
 def parse_kubeconform_stats(text: str) -> dict | None:
@@ -60,29 +108,68 @@ def parse_kubeconform_stats(text: str) -> dict | None:
     return None
 
 
+# After Unicode substitution the line patterns use ASCII tokens like [FAIL]/[OK].
+# ORDER MATTERS: summary must be checked before error because kubeconform summary
+# lines contain the word "invalid" as a field label, not as an error indicator.
 def line_css_class(line: str) -> str:
     lo = line.lower()
-    if any(x in lo for x in ["✗", "failed", " error", "invalid", "err:"]):
-        return "log-error"
-    if any(x in lo for x in ["✓ ok", "passed", "no issues found", "valid"]):
-        return "log-ok"
-    if any(x in lo for x in ["warning", "warn"]):
-        return "log-warn"
-    if any(x in lo for x in ["▶", "━", "building", "linting", "checking", "templating"]):
-        return "log-section"
-    if "summary:" in lo:
+
+    # Summary lines (kubeconform: "Summary: N resources found ... N invalid ...")
+    if re.search(r"\bsummary:", lo):
         return "log-summary"
+
+    # Section headers / step markers (after ▶→> and ━→-)
+    if re.match(r"^(\s*[-=]{3,}|>\s)", line):
+        return "log-section"
+    if any(x in lo for x in ["building kustomize", "linting chart", "templating", "checking:"]):
+        return "log-section"
+
+    # Errors — kubeconform, yamllint, helm, semantic lint
+    if any(x in lo for x in [
+        "[fail]", "error:", "err:", " error ", "is invalid",
+        "failed", "does not validate", "problem validating",
+        "could not be validated", "jsonschema:",
+    ]):
+        return "log-error"
+
+    # OK / pass
+    if any(x in lo for x in [
+        "[ok]", "passed", "no issues found", "is valid",
+        "lint passed", "0 invalid, 0 errors",
+    ]):
+        return "log-ok"
+
+    # Warnings
+    if any(x in lo for x in ["[warn]", "warning:", "warn:"]):
+        return "log-warn"
+
     return ""
 
 
+def html_escape(text: str) -> str:
+    """Minimal HTML escaping — only the characters that matter inside <pre>."""
+    return (
+        text
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+
 def render_log_html(text: str | None) -> str:
-    if not text:
+    if not text or not text.strip():
         return '<div class="log-empty">No output captured for this job.</div>'
+
     parts = []
     for line in text.splitlines():
         cls = line_css_class(line)
-        esc = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-        parts.append(f'<span class="{cls}">{esc}</span>' if cls else esc)
+        esc = html_escape(line)
+        if cls:
+            parts.append(f'<span class="{cls}">{esc}</span>')
+        else:
+            parts.append(esc)
+
     return "<pre class='log-block'>" + "\n".join(parts) + "</pre>"
 
 
